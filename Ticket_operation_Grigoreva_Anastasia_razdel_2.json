@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "53dcf60a-8260-43f0-83c9-90bb44d59b37",
+		"name": "Ticket operation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42720231",
+		"_collection_link": "https://test00-1525.postman.co/workspace/API-Helpdesk~083d71fb-8f24-4203-81d7-7c01bb6abf7f/collection/42720231-53dcf60a-8260-43f0-83c9-90bb44d59b37?action=share&source=collection_link&creator=42720231"
+	},
+	"item": [
+		{
+			"name": "Get a list of tickets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ft-sandbox.workbench.lanit.ru/api/tickets",
+					"protocol": "https",
+					"host": [
+						"ft-sandbox",
+						"workbench",
+						"lanit",
+						"ru"
+					],
+					"path": [
+						"api",
+						"tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the ticket",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token abcbe889f0306a8d35dfa101eb152850b434be35",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ft-sandbox.workbench.lanit.ru/api/tickets/18370",
+					"protocol": "https",
+					"host": [
+						"ft-sandbox",
+						"workbench",
+						"lanit",
+						"ru"
+					],
+					"path": [
+						"api",
+						"tickets",
+						"18370"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"due_date\": \"2025-03-03\",\r\n  \"assigned_to\": \"admin\",\r\n  \"title\": \"New_ticket\",\r\n  \"created\": \"2025-03-03T17:31:02.199Z\",\r\n  \"modified\": \"2025-03-03T17:31:02.199Z\",\r\n  \"submitter_email\": \"user@example.com\",\r\n  \"status\": 1,\r\n  \"on_hold\": true,\r\n  \"description\": \"string\",\r\n  \"resolution\": \"string\",\r\n  \"priority\": 1,\r\n  \"secret_key\": \"string\",\r\n  \"queue\": 1,\r\n  \"kbitem\": null,\r\n  \"merged_to\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ft-sandbox.workbench.lanit.ru/api/tickets",
+					"protocol": "https",
+					"host": [
+						"ft-sandbox",
+						"workbench",
+						"lanit",
+						"ru"
+					],
+					"path": [
+						"api",
+						"tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update the ticket",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token abcbe889f0306a8d35dfa101eb152850b434be35",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"due_date\": \"2025-03-03\",\r\n  \"assigned_to\": \"admin\",\r\n  \"title\": \"string\",\r\n  \"created\": \"2025-03-03T17:37:55.156Z\",\r\n  \"modified\": \"2025-03-03T17:37:55.156Z\",\r\n  \"submitter_email\": \"user@example.com\",\r\n  \"status\": 1,\r\n  \"on_hold\": true,\r\n  \"description\": \"string\",\r\n  \"resolution\": \"string\",\r\n  \"priority\": 1,\r\n  \"secret_key\": \"string\",\r\n  \"queue\": 2,\r\n  \"kbitem\": 1,\r\n  \"merged_to\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ft-sandbox.workbench.lanit.ru/api/tickets/18370",
+					"protocol": "https",
+					"host": [
+						"ft-sandbox",
+						"workbench",
+						"lanit",
+						"ru"
+					],
+					"path": [
+						"api",
+						"tickets",
+						"18370"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete the ticket",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token abcbe889f0306a8d35dfa101eb152850b434be35",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ft-sandbox.workbench.lanit.ru/api/tickets/18370",
+					"protocol": "https",
+					"host": [
+						"ft-sandbox",
+						"workbench",
+						"lanit",
+						"ru"
+					],
+					"path": [
+						"api",
+						"tickets",
+						"18370"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
